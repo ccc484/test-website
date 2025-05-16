@@ -5,7 +5,10 @@ const sketch2 = (p) => {
   };
 
   p.draw = function () {
-    p.fill(0, 0, 255);
+    r = Math.floor(Math.random() * 256)
+    g = Math.floor(Math.random() * 256)
+    b = Math.floor(Math.random() * 256)
+    p.fill(r, g, b);
     p.rect(p.mouseX, p.mouseY, 20, 20);
   };
 };

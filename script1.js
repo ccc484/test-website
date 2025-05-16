@@ -5,7 +5,10 @@ const sketch1 = (p) => {
   };
 
   p.draw = function () {
-    p.fill(255, 0, 0);
+    r = Math.floor(Math.random() * 256)
+    g = Math.floor(Math.random() * 256)
+    b = Math.floor(Math.random() * 256)
+    p.fill(r, g, b);
     p.ellipse(p.mouseX, p.mouseY, 20);
   };
 };
