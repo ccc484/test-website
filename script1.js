@@ -1,6 +1,6 @@
 const sketch1 = (p) => {
   p.setup = function () {
-    p.createCanvas(200, 200);
+    p.createCanvas(300, 200);
     p.background(240);
   };
 
