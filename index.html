@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Web Page</title>
-    <title>Multiple p5 Sketches</title>
-    <style>
-        .sketch-container {
-        display: inline-block;
-        margin: 20px;
-        }
-    </style>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>My Web Page</title>
+  <style>
+    .sketch-container {
+      display: inline-block;
+      margin: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Web Page</h1>
-        <p>This is my first test page</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="home">
-            <h2>Home Section</h2>
-            <p>This is the home section of the web page.</p>
-        </section>
-        <section id="about">
-            <h2>About Section</h2>
-            <p>This is the about section of the web page.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Section</h2>
-            <p>This is the contact section of the web page.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 My Web Page</p>
-    </footer>
+  <header>
+    <h1>Welcome to My Web Page</h1>
+  </header>
+  <main>
+    <section id="PiEstimation">
+      <h2>Buffon’s Needle Expirement</h2>
+      <p>Estimate Pi by dropping virutal toothpicks!</p>
+    </section>
+  </main>
 
-    <div id="sketch1" class="sketch-container"></div>
-    <div id="sketch2" class="sketch-container"></div>
+  <!-- Toothpick input and button -->
+  <input type="number" id="numInput" placeholder="Number of toothpicks..." />
+  <button onclick="startSimulation()">Start</button>
 
-    <!-- p5.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <div id="PiEstimate"></div>
+  <div id="PiError"></div>
+  <div id="sketch1" class="sketch-container"></div>
 
-    <!-- Your sketches -->
-    <script src="script1.js"></script>
-    <script src="script2.js"></script>
+  <footer>
+    <p>&copy; 2025 My Web Page</p>
+  </footer>
+
+  <!-- Load p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+  <!-- Load your simulation script -->
+  <script src="script1.js"></script>
 </body>
 </html>

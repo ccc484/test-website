@@ -4,6 +4,28 @@ body{
     text-align: center;
     padding: 40px;
 }
+ul{list-style-position:inside;}
 h1{
     color: #007acc;
+}
+h2{
+    color: #000000;
+}
+nav ul {
+  list-style: none;      /* Remove bullets */
+  padding: 0;            /* Remove default padding */
+  margin: 0;             /* Remove default margin */
+  display: flex;         /* Use flexbox */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px;             /* Optional spacing between links */
+}
+
+#PiEstimate {
+  text-align: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;          /* Or your preferred color */
+  font-weight: bold;
 }
