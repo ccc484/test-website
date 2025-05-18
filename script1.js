@@ -70,7 +70,7 @@ const sketch1 = (p) => {
     if (pick >= numPicks) {
       p.noLoop();
       const piEstimate = (numPicks / totalOn);
-      const error = ((((totalOn/numPicks)*10-p.PI))/p.PI)*100;
+      const error = (p.abs(piEstimate-p.PI)/p.PI)*100;
       document.getElementById("PiEstimate").innerText = `Estimated Pi: ${piEstimate.toFixed(5)}`;
       console.log("Estimated Pi:", piEstimate);
       document.getElementById("PiError").innerText = `Percentage Error: ${error.toFixed(5)}%`;

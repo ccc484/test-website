@@ -2,42 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Web Page</title>
-  <style>
-    .sketch-container {
-      display: inline-block;
-      margin: 20px;
-    }
-  </style>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.jpg" type="image/jpg" />
 </head>
+<!-- this is a commen-->
 <body>
   <header>
     <h1>Welcome to My Web Page</h1>
   </header>
+  <div id="nav"></div>
+  <script src="nav.js"></script>
   <main>
-    <section id="PiEstimation">
-      <h2>Buffon’s Needle Expirement</h2>
-      <p>Estimate Pi by dropping virutal toothpicks!</p>
-    </section>
+    <p>Welcome to my web page! Here you can find various projects and information about me.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, exercitationem eos. Necessitatibus error harum iure, nulla ratione, nihil quae dolorem explicabo rem modi culpa, libero aspernatur non animi officia fugit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus! Quisquam, voluptatibus! Quisquam, voluptatibus! Quisquam, voluptatibus! Quisquam, voluptatibus!</p> 
   </main>
-
-  <!-- Toothpick input and button -->
-  <input type="number" id="numInput" placeholder="Number of toothpicks..." />
-  <button onclick="startSimulation()">Start</button>
-
-  <div id="PiEstimate"></div>
-  <div id="PiError"></div>
-  <div id="sketch1" class="sketch-container"></div>
-
   <footer>
     <p>&copy; 2025 My Web Page</p>
   </footer>
-
-  <!-- Load p5.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-
-  <!-- Load your simulation script -->
-  <script src="script1.js"></script>
 </body>
 </html>
