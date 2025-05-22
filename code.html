@@ -8,16 +8,18 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to My Web Page</h1>
+    <style>
+    </style>
+    <h1>Caleb Carnes</h1><h3>Computer Engineer</h3>
   </header>
   <div id="nav"></div>
   <script src="nav.js"></script>
   <main>
-    <section id="PiEstimation">
-      <h2>Buffon’s Needle Experiment</h2>
-      <p>Estimate Pi by dropping virutal toothpicks!</p>
-    </section>
-    <input type="number" id="numInput" placeholder="Number of toothpicks..." />
+    <h2>Buffon’s Needle Experiment</h2>
+    <p>Estimate Pi by dropping virutal needles!</p>
+    <label for ="numInput">Number of needles:</label>
+    <input type="range" id="numInput" value="100" min="1" max="10000" oninput="this.nextElementSibling.value = this.value">
+    <output>100</output>
     <button onclick="startSimulation()">Start</button>
     <div id="PiEstimate"></div>
     <div id="PiError"></div>

@@ -3,7 +3,7 @@ let pick = 0;
 let numPicks = 500;
 let totalOn = 0;
 let vertLines = [];
-let sketchInstance; // ✅ Declare this so we can reuse it
+let sketchInstance;
 
 function startSimulation() {
   const inputVal = document.getElementById("numInput").value;
@@ -15,12 +15,10 @@ function startSimulation() {
   totalOn = 0;
   vertLines = [];
 
-  // Remove any existing canvas
   if (sketchInstance) {
     sketchInstance.remove();
   }
 
-  // Start new sketch
   sketchInstance = new p5(sketch1, "sketch1");
 }
 
@@ -42,7 +40,6 @@ const sketch1 = (p) => {
     let randx2 = randx + toothpickLen * p.cos(randangle);
     let randy2 = randy + toothpickLen * p.sin(randangle);
 
-    // Random color
     switch (p.floor(p.random(0, 7))) {
       case 0: p.stroke('red'); break;
       case 1: p.stroke('orange'); break;
@@ -72,8 +69,8 @@ const sketch1 = (p) => {
       const piEstimate = (numPicks / totalOn);
       const error = (p.abs(piEstimate-p.PI)/p.PI)*100;
       document.getElementById("PiEstimate").innerText = `Estimated Pi: ${piEstimate.toFixed(5)}`;
+      document.getElementById("PiError").innerText = `Percentage Error: ${error.toFixed(2)}%`;
       console.log("Estimated Pi:", piEstimate);
-      document.getElementById("PiError").innerText = `Percentage Error: ${error.toFixed(5)}%`;
       console.log("Percentage Error:", error, "%");
     }
   };
